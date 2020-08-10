@@ -17,8 +17,8 @@
     <a class="navbar-item" class:is-active={segment === undefined} href=".">
 			home
 		</a>
-		<a class="navbar-item" class:is-active={segment === 'about'} href="about">
-			about
+		<a class="navbar-item" class:is-active={segment === 'teams'} href="teams">
+			teams
 		</a>
 		<a class="navbar-item" class:is-active={segment === 'blog'} href="blog">
 			blog
