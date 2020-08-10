@@ -1,7 +1,7 @@
 <h1 class="title is-1 title has-text-centered">Teams</h1>
 
 <h2>7&8</h2>
-<a class="button" href="teams/rangi-red">
+<a class="button" href="teams/rangi-intermediate-red">
 	Rangi Red
 </a>
 
@@ -28,6 +28,10 @@
 	Rangi Purple
     </a>
 
+    <a class="button" href="teams/rangi-intermediate-blue">
+        Rangi Intermediate blue
+        </a>
+
 <h2>12</h2>
 <a class="button" href="teams/rangi-intermediate-yellow">
 	Intermediate Yellow
@@ -38,15 +42,16 @@
     </a>
 
 <h2>13</h2>
-<a class="button" href="teams/rangi-intermediate-red">
-	Intermediate Red
-    </a>
+
     
     <a class="button" href="teams/rangi-brown">
 	Rangi Brown
     </a>
 
 <h2>Mixed</h2>
+<a class="button" href="teams/rangi-open-red">
+	Intermediate Red
+    </a>
 
 <a class="button" href="/">
 	Home
