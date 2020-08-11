@@ -1,75 +1,68 @@
 <script>
     let players = [
     {
-   name: "Brianna Hodgen",
+   name: "Molly Penberthy",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Nina Cantos",
+   name: "Riley Pirie",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Henrietta Evatt",
+   name: "Mya Wolfenden",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Lily Nimmo",
+   name: "Aggie Weston",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Sophie Payne",
+   name: "Hayley Bond",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Sophie Cusiel",
+   name: "Polly Cross",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Imogen Savage",
+   name: "Tilly Hlavac",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Anna Wyn-Harris",
+   name: "Brooke Summerfield",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
 
   {
-   name: "Jorja Tuanui",
+   name: "Alyssa Astle",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
 
-  {
-   name: "Stui Hari",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
     ]
   </script>
   
