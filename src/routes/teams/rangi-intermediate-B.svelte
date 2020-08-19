@@ -36,7 +36,7 @@
   },
   
   {
-   name: "Sophie cusiel",
+   name: "Sophie Cusiel",
    playing: false,
    transportThere: false,
    transportBack: false,
