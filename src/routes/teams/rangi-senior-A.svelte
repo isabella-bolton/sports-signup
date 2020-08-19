@@ -1,70 +1,63 @@
 <script>
     let players = [
     {
-   name: "Annabel Strotton",
+   name: "Charlotte Gray",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Tabitha Porter",
+   name: "Rosie Gray",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Ava-Bella Stowers",
+   name: "Abby Kneebone",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Miriana Hansen",
+   name: "Elisha Vili Umaga",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Amelie Wilke",
+   name: "Serena Tarawa",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Alania Perkins",
+   name: "Harriet Rance",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Evelyn Stewart",
+   name: "Claudia O'Shannessey",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Sophie Percy",
+   name: "Dayna Simpson",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
 
   {
-   name: "Sophie Mounce",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-
-  {
-   name: "Joanna Yang",
+   name: "Molly Kneebone",
    playing: false,
    transportThere: false,
    transportBack: false,
@@ -79,7 +72,7 @@
   
     <label>
       <input type="checkbox" bind:checked={player.playing} />
-      playing, I am playing.
+      I am playing.
     </label>
   
     {#if player.playing}
@@ -94,4 +87,6 @@
       </label>
     {/if}
   {/each}
-  
+    <a class="button" href="teams">
+	Back
+</a>

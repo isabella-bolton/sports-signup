@@ -1,82 +1,62 @@
 <script>
-import { stores } from "@sapper/app";
-const { session } = stores();
-
-session.staffInfo = [];
-
     let players = [
     {
-   name: "Annabelle Jones",
+   name: "Alice Wallis",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Maddy Sheat",
+   name: "Phoebe Wallis",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Lilly Ellis",
+   name: "Georgie Bethel",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Anna Casey",
+   name: "Zara Frost",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Claudia Brown",
+   name: "Zara Stewart",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Holly Allred",
+   name: "Nicole Vance",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Emma Schroder",
+   name: "Bex Skinner",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
   
   {
-   name: "Georgia Sheat",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-
-  {
-   name: "Brooke Raitt",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-
-  {
-   name: "Chloe Berge",
+   name: "Florence Nelson",
    playing: false,
    transportThere: false,
    transportBack: false,
   },
 
 
-  
     ]
   </script>
   

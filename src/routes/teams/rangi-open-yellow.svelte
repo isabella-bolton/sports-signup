@@ -85,7 +85,7 @@
   
     <label>
       <input type="checkbox" bind:checked={player.playing} />
-      playing, I am playing.
+      I am playing.
     </label>
   
     {#if player.playing}
@@ -100,4 +100,6 @@
       </label>
     {/if}
   {/each}
-  
+    <a class="button" href="teams">
+	Back
+</a>
