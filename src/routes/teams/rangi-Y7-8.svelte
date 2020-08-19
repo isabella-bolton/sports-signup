@@ -75,6 +75,8 @@
     ]
   </script>
   
+  /* 
+
   {#each players as player}
     <p>{player.name}</p>
   
