@@ -1,9 +1,6 @@
 <script>
-import { stores } from "@sapper/app";
-const { session } = stores();
-
-session.staffInfo = [];
-
+/* stores they players names and if they're playing and if they're getting transport there and back
+*/
     let players = [
     {
    name: "Annabelle Jones",
@@ -79,7 +76,7 @@ session.staffInfo = [];
   
     ]
   </script>
-  
+    <!-- Each player gets a playing checkbox next to it-->  
   {#each players as player}
     <p>{player.name}</p>
   
@@ -88,6 +85,7 @@ session.staffInfo = [];
       I am playing.
     </label>
   
+    <!--  If the player ticks playing, then add transport there and back boxes -->
     {#if player.playing}
       <label>
         <input type="checkbox" bind:checked={player.transportThere} />

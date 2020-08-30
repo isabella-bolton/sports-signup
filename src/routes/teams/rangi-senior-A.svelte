@@ -1,4 +1,6 @@
 <script>
+/* stores they players names and if they're playing and if they're getting transport there and back
+*/
     let players = [
     {
    name: "Charlotte Gray",
@@ -66,7 +68,7 @@
   
     ]
   </script>
-  
+  <!-- Each player gets a playing checkbox next to it-->  
   {#each players as player}
     <p>{player.name}</p>
   
@@ -75,6 +77,7 @@
       I am playing.
     </label>
   
+    <!--  If the player ticks playing, then add transport there and back boxes -->
     {#if player.playing}
       <label>
         <input type="checkbox" bind:checked={player.transportThere} />
