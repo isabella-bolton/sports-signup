@@ -1,96 +1,93 @@
 <script>
-/* stores they players names and if they're playing and if they're getting transport there and back
-*/
-    let players = [
+  /* stores they players names and if they're playing and if they're getting transport there and back
+   */
+  let players = [
     {
-   name: "Molly Penberthy",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Riley Pirie",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Mollie Wolfenden",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Aggie Weston",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Hayley Bond",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Polly Cross",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  
-  {
-   name: "Tilly Hlavac",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  {
-   name: "Brooke Summerfield",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
+      name: "Molly Penberthy",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
 
     {
-   name: "Alyssa Astle",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
+      name: "Riley Pirie",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
 
+    {
+      name: "Mollie Wolfenden",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
 
+    {
+      name: "Aggie Weston",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
 
-    ]
-  </script>
- <!-- Each player gets a playing checkbox next to it-->  
-  {#each players as player}
-    <p>{player.name}</p>
-  
+    {
+      name: "Hayley Bond",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Polly Cross",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Tilly Hlavac",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+    {
+      name: "Brooke Summerfield",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Alyssa Astle",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    }
+  ];
+</script>
+
+<!-- Each player gets a playing checkbox next to it-->
+{#each players as player}
+  <p>{player.name}</p>
+
+  <label>
+    <input type="checkbox" bind:checked={player.playing} />
+    I am playing.
+  </label>
+
+  <!--  If the player ticks playing, then add transport there and back boxes -->
+  {#if player.playing}
     <label>
-      <input type="checkbox" bind:checked={player.playing} />
-      I am playing.
+      <input type="checkbox" bind:checked={player.transportThere} />
+      Transport there?
     </label>
 
-   <!--  If the player ticks playing, then add transport there and back boxes -->
-    {#if player.playing}
-      <label>
-        <input type="checkbox" bind:checked={player.transportThere} />
-        Transport there?
-      </label>
-  
-      <label>
-        <input type="checkbox" bind:checked={player.transportBack} />
-        Transport back?
-      </label>
-    {/if}
-  {/each}
-    <a class="button" href="teams">
-	Back
-</a>
+    <label>
+      <input type="checkbox" bind:checked={player.transportBack} />
+      Transport back?
+    </label>
+  {/if}
+{/each}
+<a class="button" href="teams">Back</a>
+
+<img src="/logo.png" alt="RRGS logo" />

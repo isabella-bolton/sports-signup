@@ -1,109 +1,108 @@
 <script>
-/* stores they players names and if they're playing and if they're getting transport there and back
-*/
-    let players = [
+  /* stores they players names and if they're playing and if they're getting transport there and back
+   */
+  let players = [
     {
-   name: "Harriet Graham",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Jasmine Strawbridge",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Elizabeth Dooley",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Sophie Barnes",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Frankie Reid",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Mia Roadley",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Penny Proctor",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-  {
-   name: "Penny Frost",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
+      name: "Harriet Graham",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
 
-  {
-   name: "Jorja Tuanui",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
+    {
+      name: "Jasmine Strawbridge",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
 
-  {
-   name: "Eva Matthews",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
+    {
+      name: "Elizabeth Dooley",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
 
-  {
-   name: "Simmone Cox",
-   playing: false,
-   transportThere: false,
-   transportBack: false,
-  },
-  
-    ]
-  </script>
-  
-  <!-- Each player gets a playing checkbox next to it-->  
-  {#each players as player}
-    <p>{player.name}</p>
-  
+    {
+      name: "Sophie Barnes",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Frankie Reid",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Mia Roadley",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Penny Proctor",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Penny Frost",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Jorja Tuanui",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Eva Matthews",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    },
+
+    {
+      name: "Simmone Cox",
+      playing: false,
+      transportThere: false,
+      transportBack: false
+    }
+  ];
+</script>
+
+<!-- Each player gets a playing checkbox next to it-->
+{#each players as player}
+  <p>{player.name}</p>
+
+  <label>
+    <input type="checkbox" bind:checked={player.playing} />
+    I am playing.
+  </label>
+
+  <!--  If the player ticks playing, then add transport there and back boxes -->
+  {#if player.playing}
     <label>
-      <input type="checkbox" bind:checked={player.playing} />
-      I am playing.
+      <input type="checkbox" bind:checked={player.transportThere} />
+      Transport there?
     </label>
-  
-    <!--  If the player ticks playing, then add transport there and back boxes -->
-    {#if player.playing}
-      <label>
-        <input type="checkbox" bind:checked={player.transportThere} />
-        Transport there?
-      </label>
-  
-      <label>
-        <input type="checkbox" bind:checked={player.transportBack} />
-        Transport back?
-      </label>
-    {/if}
-  {/each}
-    <a class="button" href="teams">
-	Back
-</a>
+
+    <label>
+      <input type="checkbox" bind:checked={player.transportBack} />
+      Transport back?
+    </label>
+  {/if}
+{/each}
+<a class="button" href="teams">Back</a>
+
+<img src="/logo.png" alt="RRGS logo" />
