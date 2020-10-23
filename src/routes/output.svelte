@@ -28,10 +28,3 @@
   {/if}
 {/each}
 
-<!--
-player
-  - name
-  - playing
-  - transportThere
-  - transportBack
--->

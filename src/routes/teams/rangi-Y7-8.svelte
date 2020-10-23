@@ -1,25 +1,37 @@
 <script>
   /* stores they players names and if they're playing and if they're getting transport there and back
    */
-
   let players = [];
 
   /*Saves data to local*/
-  function saveDataToLocal() {
-    let data = JSON.stringify(players);
-    localStorage.setItem("y78Players", data);
+  function savedata() {
+    // let data = JSON.stringify(players);
+    let data = {
+      players: players
+    };
+
+    // save the person object to the database under their first name
+
+    db.collection("players")
+      .doc("y78players")
+      .set(data);
   }
 
   /*Gets data from local*/
-  function getDataFromLocal() {
+  async function getdata() {
     console.log("Getting the data");
-    let data = localStorage.getItem("y78Players");
+
+    let data = await db
+      .collection("players")
+      .doc("y78players")
+      .get();
     console.log("Got the data.");
+    data = data.data();
     if (data == undefined) {
       console.log("Data is undefined");
       players = [
         {
-          name: "Annabel Strotton",
+          name: "Annabel Stratton",
           playing: false,
           transportThere: false,
           transportBack: false,
@@ -91,11 +103,12 @@
       ];
     } else {
       console.log("Data was found");
-      players = JSON.parse(data);
+      //players = JSON.parse(data);
+      players = data.players;
     }
   }
 
-  getDataFromLocal();
+  getdata();
 </script>
 
 <style>
@@ -137,6 +150,10 @@
   .player {
     margin-top: 30px;
     margin-left: 30px;
+  }
+
+    button{
+    margin-bottom: 30px;
   }
 </style>
 
@@ -183,7 +200,7 @@
     <nav />
 
     <a class="button" href="teams">Back</a>
-    <button class="button" on:click={saveDataToLocal}>Save</button>
+    <button class="button" on:click={savedata}>Save</button>
     <a class="button" href="output">Players</a>
 
   </main>
