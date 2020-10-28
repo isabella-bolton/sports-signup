@@ -54,6 +54,10 @@
     padding-right: 300px;
   }
 
+  h1 {
+    color: #ffc600;
+  }
+
   #y7-8 {
     background-color: rgb(240, 230, 230);
     border-color: #ffc600;
@@ -106,7 +110,7 @@
 
 <div id="grid-container">
   <header>
-    <h1 class="title is-1 title has-text-centered has-text-warning">Teams</h1>
+    <h1 class="title is-1 title has-text-centered">Teams</h1>
   </header>
 
   <nav>

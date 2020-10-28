@@ -1,5 +1,24 @@
 <script>
+  import { goto } from "@sapper/app";
   let name = "";
+  let letters = /^[A-Za-z]+$/;
+
+  function check() {
+    // check the name to see if it's vaild
+    if (name === "") {
+      alert("please enter your name");
+    } else if (name === " ") {
+      alert("please enter your name");
+    } else if (!name.match(letters)) {
+      alert("please enter a name without numbers");
+    } else if (name.length < 3) {
+      alert("Please enter a name longer than 3 characters");
+    } else if (name.length > 20) {
+      alert("please enter a name less than 20 characters");
+    } else {
+      goto("./teams");
+    }
+  }
 </script>
 
 <style>
@@ -37,11 +56,23 @@
 
   #hockeyplayer {
     margin-top: 50px;
+    margin-left: 80px;
+    margin-top: 100px;
   }
 
   #dancer {
-    margin-top: 70px;
+    margin-top: 100px;
+    margin-left: 210px;
+  }
+
+  #relayrunner {
+    margin-left: 150px;
+    margin-top: 30px;
+  }
+
+  #basketballer {
     margin-left: 130px;
+    margin-top: 30px;
   }
 
   nav {
@@ -56,14 +87,18 @@
     background-color: #1e387c;
     border-top: 8px solid #ffc600;
   }
+
+  h1 {
+    margin-top: 50px;
+    font-size: 50px;
+    color: #ffc600;
+  }
 </style>
 
 <section>
 
   <header>
-    <h1 class="title is-1 title has-text-centered has-text-warning">
-      Rangi Ruru Weekly Basketball Signup
-    </h1>
+    <h1 class="title has-text-centered">Rangi Ruru Weekly Basketball Signup</h1>
   </header>
 
   <nav>
@@ -75,7 +110,8 @@
       <p>Please enter your name.</p>
     {/if}
 
-    <a class="button" href="teams">Next</a>
+    <button on:click={check}>Next</button>
+
   </nav>
 
   <img id="dancer" src="/Dancer.png" alt="Dancer" />
