@@ -1,7 +1,7 @@
 <script>
   import { goto } from "@sapper/app";
   let name = "";
-  let letters = /^[A-Za-z]+$/;
+  let letters = /^[\sA-Za-z]+$/;
 
   function check() {
     // check the name to see if it's vaild
